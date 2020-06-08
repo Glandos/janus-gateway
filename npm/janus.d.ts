@@ -1,4 +1,4 @@
-declare namespace JanusJS {
+Mediadeclare namespace JanusJS {
 	interface Dependencies {
 		adapter: any;
 		newWebSocket: (server: string, protocol: string) => WebSocket;
@@ -137,6 +137,8 @@ declare namespace JanusJS {
 		static warn(...args: any[]): void;
 		static error(...args: any[]): void;
 		static randomString(length: number): string;
+		static attachMediaStream(element: HTMLMediaElement, stream: MediaStream);
+		static reattachMediaStream(to: HTMLMediaElement, from: HTMLMediaElement);
 
 		constructor(options: ConstructorOptions);
 
